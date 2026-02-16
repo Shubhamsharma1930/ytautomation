@@ -1,0 +1,25 @@
+# crosss fade 
+pydub==0.25.1
+ffmpeg-python==0.2.0
+
+# beat matching 
+librosa==0.11.0   
+numpy==2.2.6        
+scipy==1.15.3   
+
+#frontend
+streamlit==1.51.0  
+
+# software
+fastapi==0.122.0
+python-multipart==0.0.20
+uvicorn[standard]
+Pillow==12.0.0
+requests==2.32.5
+aiofiles==25.1.0
+uvicorn==0.38.0
+python-multipart==0.0.20
+
+# experiment notebook
+ipykernel==7.1.0
+matplotlib==3.10.7
