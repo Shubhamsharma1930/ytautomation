@@ -5,15 +5,15 @@ It allows you to:
 
  ✔ Upload multiple songs
 
- ✔ Auto-generate smooth fade-in/fade-out DJ-style mixtapes
+ ✔ Auto-generate smooth fade-in/fade-out **DJ-style mixtapes**
 
- ✔ Auto-generate YouTube descriptions with timestamps
+ ✔ Auto-generate **YouTube descriptions** with timestamps
 
- ✔ Combine audio + background image to create MP4 videos using FFmpeg
+ ✔ Combine audio + background image to create **MP4 videos** using FFmpeg
 
- ✔ Use a simple Streamlit UI
+ ✔ Use a simple **Streamlit UI**
 
- ✔ Handle background jobs with FastAPI
+ ✔ Handle background jobs with **FastAPI**
 
 ---
 
@@ -22,7 +22,7 @@ It allows you to:
 - Concatenate multiple songs
 - Add smooth transitions between tracks
 - Auto-normalize audio channels & frame rate
-- Outputs a final mixtape.mp3
+- Outputs a final `mixtape.mp3`
 
 ### 📝 2. YouTube Description Generator
 - Reads track durations
@@ -32,7 +32,7 @@ It allows you to:
 ### 🎥 3. Video Renderer (FFmpeg)
 - Converts a static image + MP3 into an MP4 video
 - Optimized for long audio files
-- Uses libx264 + AAC audio codec
+- Uses `libx264` + AAC audio codec
 
 ### 🖥 4. Streamlit Frontend
 A simple web UI to:
@@ -60,11 +60,11 @@ API endpoints for:
 ## 🧩 How it Works (Pipeline)
 1. **Upload tracks**
 
-    Streamlit uploads → FastAPI saves to /uploaded/{job_prefix}/.
+    Streamlit uploads → FastAPI saves to `/uploaded/{job_prefix}/`.
 
 2. **Create mixtape**
 
-    FastAPI background job → audio.py → applies fade transitions → saves output/mixtape.mp3.
+    FastAPI background job → `audio.py` → applies fade transitions → saves `output/mixtape.mp3`.
 
 3. **Generate description**
     
@@ -72,7 +72,7 @@ API endpoints for:
 
 4. **Create video**
 
-    video.py runs FFmpeg → merges background image + MP3 → outputs output/mixtape_vid.mp4.
+    `video.py` runs FFmpeg → merges background image + MP3 → outputs `output/mixtape_vid.mp4`.
 
 5. **Download**
 
@@ -82,12 +82,12 @@ API endpoints for:
 ## 🛠 API Endpoints Summary
 |Endpoint | Method | Description |
 |---------|--------|-------------|
-|/upload-track/ |	POST |	Upload a single audio file
-|/create-mixtape/ |	POST |	Start background mixtape job
-|/job/{job_id} | GET  | Check job status
-|/generate-description/ |	POST |Generate YouTube description
-|/make-video/ |	POST |	Combine image + audio → MP4
-|/download/ |	GET |	Download output files
+|`/upload-track/` |	POST |	Upload a single audio file
+|`/create-mixtape/` |	POST |	Start background mixtape job
+|`/job/{job_id}` | GET  | Check job status
+|`/generate-description/` |	POST |Generate YouTube description
+|`/make-video/` |	POST |	Combine image + audio → MP4
+|`/download/` |	GET |	Download output files
 
 ---
 
